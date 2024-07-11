@@ -17,7 +17,7 @@ export default function TodoCard() {
     };
     if (todoInput.length <= 4) {
       todos.length + 0;
-      alert("alert");
+      alert("invalid less than 4 characters");
       return;
     }
     setTodoInput("");
