@@ -9,14 +9,18 @@ export default function TodoCard() {
       isDone: true,
     },
   ]);
-
   const handleSubmit = () => {
     const newData = {
       id: todos.length + 1,
       task: todoInput,
       isDone: false,
     };
-
+    if (todoInput.length <= 4) {
+      todos.length + 0;
+      alert("alert");
+      return;
+    }
+    setTodoInput("");
     setTodos([...todos, newData]);
   };
 
